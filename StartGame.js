@@ -109,8 +109,8 @@ var boss_fish = {
     img: new Image(),
     img2: new Image(),
     name: "Sockets",
-    height: 240,
-    width: 218
+    height: 218,
+    width: 240
 };
 
 var soundImg = {

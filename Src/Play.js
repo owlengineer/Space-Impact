@@ -574,7 +574,7 @@ function drawEnemy() {
             if(_enemy.shootClock % (boss_fish_firerate * randomInt(9,13)) === 0)
             {
                 enemies.push({
-                    x: _enemy.x,
+                    x: _enemy.x-120,
                     y: _enemy.y+boss_fish.height/2,
                     type: "hard",
                     shootClock: 0,
@@ -684,7 +684,7 @@ function checkEnemy() {
                 shipBullets[j].y = -10000;
             }
 
-            if (!won && enemies[i].type != "boss" && distanceToEnemy(shipBullets[j], enemies[i]) < enemy.width * 9 / 20) {
+            if (!won && enemies[i].type != "boss" && enemies[i].type != "boss_fish" && distanceToEnemy(shipBullets[j], enemies[i]) < enemy.width * 9 / 20) {
                 if(shipBullets[j].type !== "missile")
                 {
                     shipBullets[j].y = -10000;
